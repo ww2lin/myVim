@@ -1,9 +1,6 @@
 syntax on
 set autoindent
 set tabstop=4
-set expandtab
-set smarttab
-
 " Enable mouse support in console
 set mouse=a
 
@@ -12,6 +9,12 @@ set number
 
 " And so is Artificial Intellegence!
 set smartcase
+
+set ignorecase      " ignore case when searching 
+
+set title           " show title in console title bar
+
+set hlsearch        " highlight searches
 
 " Space will toggle folds!
 nnoremap <space> za
