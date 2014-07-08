@@ -1,17 +1,27 @@
 "tab as space
 set expandtab
 
+"mark p to toggle paste mode
+map p :set invpaste<CR>
+
 "current line highlight
 "set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=blue ctermfg=white
 "cursor highlight stays after moving
 nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
 "map g to toggle highlight
-"nnoremap g :set cursorline! cursorcolumn!<CR>
-nnoremap g :set cursorline!
+nnoremap g :set cursorline! cursorcolumn!<CR>
+"nnoremap g :set cursorline!
 set cursorline!
-"sub directory for .vim plugins
+set cursorcolumn!
+
+"subble CursorLine
+highlight CursorColumn guibg=#404040
+
+"sub directory
 call pathogen#infect() 
+
+
 
 "coffee scirpt
 syntax enable
