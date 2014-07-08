@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/alelin'
 let g:netrw_dirhist_2='/Users/alelin/Documents/workspace/test'
 let g:netrw_dirhist_3='/Users/alelin/Documents/workspace/itier/test/integration'
+let g:netrw_dirhist_4='/Users/alelin/.vim'

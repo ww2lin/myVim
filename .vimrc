@@ -1,6 +1,12 @@
 "current line highlight
-set cursorline
-
+"set cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=blue ctermfg=white
+"cursor highlight stays after moving
+nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
+"map g to toggle highlight
+"nnoremap g :set cursorline! cursorcolumn!<CR>
+nnoremap g :set cursorline!
+set cursorline!
 "sub directory for .vim plugins
 call pathogen#infect() 
 
