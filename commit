@@ -1,3 +1,4 @@
 git add .vimrc
 git add .vim
 git commit
+git push
