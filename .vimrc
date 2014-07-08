@@ -1,3 +1,6 @@
+"tab as space
+set expandtab
+
 "current line highlight
 "set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=blue ctermfg=white
