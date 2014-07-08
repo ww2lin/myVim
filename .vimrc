@@ -1,4 +1,8 @@
 syntax on
+
+"sub directory for .vim plugins
+call pathogen#infect() 
+
 set autoindent
 set tabstop=4
 " Enable mouse support in console
