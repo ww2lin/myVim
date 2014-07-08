@@ -1,7 +1,11 @@
-syntax on
+"syntax on
 
 "sub directory for .vim plugins
 call pathogen#infect() 
+
+"coffee scirpt
+syntax enable
+filetype plugin indent on
 
 set autoindent
 set tabstop=4
