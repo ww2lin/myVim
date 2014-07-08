@@ -1,4 +1,5 @@
-"syntax on
+"current line highlight
+set cursorline
 
 "sub directory for .vim plugins
 call pathogen#infect() 
@@ -8,7 +9,7 @@ syntax enable
 filetype plugin indent on
 
 set autoindent
-set tabstop=4
+set tabstop=2
 " Enable mouse support in console
 set mouse=a
 
