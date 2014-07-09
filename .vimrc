@@ -18,13 +18,26 @@ set cursorcolumn!
 "subble CursorLine
 highlight CursorColumn guibg=#404040
 
-"sub directory
-call pathogen#infect() 
+" Start NERDTree
+autocmd VimEnter * NERDTree
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
 
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
 
 "coffee scirpt
-syntax enable
 filetype plugin indent on
 
 set autoindent
@@ -54,3 +67,7 @@ if v:version >= 700
   " Enable spell check for text files
   autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
 endif
+
+call pathogen#infect('bundle/*') 
+syntax on
+filetype plugin indent on 
