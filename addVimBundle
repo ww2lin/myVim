@@ -1,6 +1,5 @@
 #!/bin/bash
 echo {$1}
 name=`echo $1 | sed 's/.*\/\(.*\)\.git/\1/g'`
-echo $name
-git subtree add --prefix=.vim/bundle/{$name} $1 master
+git subtree add --prefix=.vim/bundle/$name $1 master
 
