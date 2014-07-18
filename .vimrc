@@ -18,6 +18,7 @@ set cursorcolumn!
 "subble CursorLine
 highlight CursorColumn guibg=#404040
 
+
 " Start NERDTree
 autocmd VimEnter * NERDTree
 " Go to previous (last accessed) window.
