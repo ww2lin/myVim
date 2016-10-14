@@ -20,11 +20,14 @@ highlight CursorColumn guibg=#404040
 
 
 " Start NERDTree
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+" NERDtree Toggle Shortcut
+noremap <leader>q :NERDTreeToggle<CR>
 
 "Easier split navigations
 "We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j:

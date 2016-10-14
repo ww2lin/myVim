@@ -1,4 +1,5 @@
 #!/bin/bash
+#arugs is in the form of  projcet-name.git
 echo {$1}
 name=`echo $1 | sed 's/.*\/\(.*\)\.git/\1/g'`
 git subtree add --prefix=.vim/bundle/$name $1 master
