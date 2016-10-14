@@ -4,3 +4,7 @@
         s = status
         c = commit
         ca = commit --amend
+
+[core]
+        autocrlf = input
+        whitespace = cr-at-eol
