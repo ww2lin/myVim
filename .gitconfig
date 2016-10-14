@@ -1,0 +1,6 @@
+[alias]
+        ad = add -N
+        d = icdiff
+        s = status
+        c = commit
+        ca = commit --amend
