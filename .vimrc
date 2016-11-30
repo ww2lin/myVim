@@ -1,3 +1,7 @@
+" disable vi
+set nocompatible
+syntax enable
+
 "tab as space
 set expandtab
 
@@ -5,19 +9,17 @@ set expandtab
 map p :set invpaste<CR>
 
 "current line highlight
-"set cursorcolumn
-hi CursorLine   cterm=NONE ctermbg=blue ctermfg=white
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=lightgrey 
+
 "cursor highlight stays after moving
-nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
+"nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
 "map g to toggle highlight
-nnoremap g :set cursorline! cursorcolumn!<CR>
-"nnoremap g :set cursorline!
-set cursorline!
-set cursorcolumn!
+"set cursorline!
+"set cursorcolumn!
 
 "subble CursorLine
 highlight CursorColumn guibg=#404040
-
 
 " Start NERDTree
 "autocmd VimEnter * NERDTree
@@ -31,13 +33,10 @@ noremap <leader>q :NERDTreeToggle<CR>
 
 "Easier split navigations
 "We can use different key mappings for easy navigation between splits to save a keystroke. So instead of ctrl-w then j, it’s just ctrl-j:
-
 nnoremap <S-J> <C-W><C-J>
 nnoremap <S-K> <C-W><C-K>
 nnoremap <S-L> <C-W><C-L>
 nnoremap <S-H> <C-W><C-H>
-
-
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
@@ -51,7 +50,6 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
-"coffee scirpt
 filetype plugin indent on
 
 set autoindent
@@ -82,6 +80,19 @@ if v:version >= 700
   autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
 endif
 
+" FINDING FILES:
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
+" NOW WE CAN:
+" - Hit tab to :find by partial match
+" - Use * to make it fuzzy
+
+" THINGS TO CONSIDER:
+" - :b lets you autocomplete any open buffer
+
 call pathogen#infect('bundle/*') 
-syntax on
-filetype plugin indent on 
