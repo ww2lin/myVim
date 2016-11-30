@@ -21,6 +21,10 @@ highlight CursorLine cterm=NONE ctermbg=lightgrey
 "subble CursorLine
 highlight CursorColumn guibg=#404040
 
+"show current file path as  status bar at the bottom
+set laststatus=2
+set statusline=%F
+
 " Start NERDTree
 "autocmd VimEnter * NERDTree
 " Go to previous (last accessed) window.

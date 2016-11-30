@@ -1,6 +1,12 @@
 [alias]
         ad = add -N
+        all = add -N .
         d = icdiff
         s = status
         c = commit
         ca = commit --amend
+        co = checkout
+
+[core]
+        autocrlf = input
+        whitespace = cr-at-eol
